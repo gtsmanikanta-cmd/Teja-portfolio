@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Name | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #f5f7fa;
+            color: #222;
+        }
+
+        /* Navigation */
+        nav {
+            background: #111827;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav h2 {
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #60a5fa;
+        }
+
+        /* Home */
+        .home {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #dbeafe, #f5f7fa);
+        }
+
+        .home h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .home h1 span {
+            color: #2563eb;
+        }
+
+        .home p {
+            font-size: 20px;
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+        }
+
+        /* Common Sections */
+        section {
+            padding: 70px 8%;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 35px;
+            color: #111827;
+        }
+
+        /* About */
+        .about {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+        }
+
+        /* Skills */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .skill {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill h3 {
+            color: #2563eb;
+            margin-bottom: 8px;
+        }
+
+        /* Projects */
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .project {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .project h3 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #555;
+        }
+
+        /* Education */
+        .education {
+            background: #eef2ff;
+        }
+
+        .education-box {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .contact a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .home h1 {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <h2>My Portfolio</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Home -->
+    <section class="home" id="home">
+        <div>
+            <h1>Hello, I'm <span>Your Name</span></h1>
+
+            <p>
+                Undergraduate Student | Python Developer | AI Enthusiast
+            </p>
+
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+        <h2>About Me</h2>
+
+        <div class="about">
+            <p>
+                I am an undergraduate student interested in programming,
+                artificial intelligence, web development and technology.
+                I enjoy learning new skills and building projects that
+                solve real-world problems.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill">
+                <h3>Python</h3>
+                <p>Basic to Intermediate</p>
+            </div>
+
+            <div class="skill">
+                <h3>Java</h3>
+                <p>Programming Fundamentals</p>
+            </div>
+
+            <div class="skill">
+                <h3>C</h3>
+                <p>Programming & Problem Solving</p>
+            </div>
+
+            <div class="skill">
+                <h3>HTML</h3>
+                <p>Web Development</p>
+            </div>
+
+            <div class="skill">
+                <h3>CSS</h3>
+                <p>Web Design</p>
+            </div>
+
+            <div class="skill">
+                <h3>Artificial Intelligence</h3>
+                <p>AI Fundamentals</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <div class="projects-container">
+
+            <div class="project">
+                <h3>Portfolio Website</h3>
+                <p>
+                    A personal portfolio website created using
+                    HTML and CSS to showcase my skills and projects.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Python Project</h3>
+                <p>
+                    Add your Python project description here.
+                    Explain what the project does and what you learned.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>AI Project</h3>
+                <p>
+                    Add your AI project details here, including
+                    the problem you solved and technologies used.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Education -->
+    <section class="education" id="education">
+        <h2>Education</h2>
+
+        <div class="education-box">
+            <h3>Undergraduate Degree</h3>
+
+            <p>
+                College Name: Your College Name
+            </p>
+
+            <p>
+                Course: Your Course
+            </p>
+
+            <p>
+                Year: 2026 - Present
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+
+        <p>
+            Email:
+            <a href="mailto:yourmail@gmail.com">
+                yourmail@gmail.com
+            </a>
+        </p>
+
+        <p>
+            Phone: +91 XXXXX XXXXX
+        </p>
+
+        <p>
+            GitHub:
+            <a href="#">Your GitHub Profile</a>
+        </p>
+
+        <p>
+            LinkedIn:
+            <a href="#">Your LinkedIn Profile</a>
+        </p>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Your Name. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
